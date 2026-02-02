@@ -1,0 +1,29 @@
+{
+  "name": "content-publisher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "mocha workers/**/*.test.js",
+    "start": "node index.js",
+    "build": "npx pkg index.js --targets node18-macos-x64",
+    "playbook-log": "LOG_EXTRACTING_LEVEL=error LOG_PUBLISHING_LEVEL=info node index --playbook-log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7",
+    "jsdom": "^26.0.0",
+    "mocha": "^11.1.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "sinon": "^19.0.2",
+    "sinon-chai": "^4.0.0"
+  }
+}
